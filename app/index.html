@@ -1,16 +1,36 @@
-<!-- index.html -->
-<doctype html>
+<!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
-        <title></title>
+        <title>test</title>
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="vendors/jOrgChart/jquery.jOrgChart.css" />
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
     </head>
-    <body ng-app="orgchartappApp">
+    <body ng-app="orgchartappApp" >
         <!-- header -->
-        <div class="container" ng-include="'module/home/home.html'"></div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Organigramme application</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#organigramme">Organigramme</a></li>
+                    <li><a href="#admin">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div ng-view></div>
+
         <!-- script tags -->
+        <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+        <script src="vendors/jOrgChart/jquery.jOrgChart.js"></script>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="module/app.js"></script>
+        <script src="module/home/home.js"></script>
+        <script src="module/organigramme/organigramme.js"></script>
+        <script src="module/admin/admin.js"></script>
     </body>
 </html>

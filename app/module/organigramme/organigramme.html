@@ -1,0 +1,23 @@
+<div id="{{orgID}}">
+    <!-- container for org chart -->
+</div>
+<ul id="org" style="display:none;" >
+    <li>
+        {{title}}
+        <ul>
+            <li ng-repeat="user in users"><!-- Level 1 -->
+                {{user.name}}
+                <ul>
+                    <li ng-repeat="child in user.child"><!-- Level 2 -->
+                        {{child.name}}
+                        <ul>
+                            <li ng-repeat="grandchild in child.grandchild"><!-- Level 3 -->
+                                {{grandchild.name}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>

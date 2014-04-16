@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         dev: {
             options: {
                 sourceMap: true,
-                sourceMapFilename: 'styles/main.css.map',
+                sourceMapFilename: 'app/styles/main.css.map',
                 // This is mandatory for Chrome to parse the less files
                 sourceMapRootpath: 'http://localhost/org-chart-app/app/'
             },
@@ -71,6 +71,12 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
+      },
+      all: {
+        files: [
+          'app/styles/*.less'
+        ],
+        tasks: ['less']
       }
     },
 

@@ -7,8 +7,16 @@ angular
     .config(function ($routeProvider) {
         $routeProvider
         .when('/', {
-            templateUrl: 'home/home.html',
-            controller: 'MainCtrl'
+            templateUrl: 'module/home/home.html',
+            controller: 'HomeCtrl'
+        })
+        .when('/organigramme', {
+            templateUrl: 'module/organigramme/organigramme.html',
+            controller: 'OrgCtrl'
+        })
+        .when('/admin', {
+            templateUrl: 'module/admin/admin.html',
+            controller: 'OrgCtrl'
         })
         .otherwise({
             redirectTo: '/'

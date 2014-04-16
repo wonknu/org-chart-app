@@ -1,10 +1,7 @@
 'use strict';
 
 angular.module('orgchartappApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('HomeCtrl', function ($scope) {
+        console.log('HomeCtrl');
+        $scope.awesomeThings = [];
+    });
